@@ -32,7 +32,7 @@ class ProjectMetricCodeClimate
   end
 
   def self.credentials
-    ['url', 'channel', 'token']
+    [:url, :channel, :token]
   end
 
 
