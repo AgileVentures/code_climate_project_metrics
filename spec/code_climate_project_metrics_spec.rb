@@ -4,6 +4,12 @@ describe ProjectMetricCodeClimate, :vcr do
 
   let(:raw_data_three_point_five) { File.read './spec/data/code_climate_3_5_image.svg' }
 
+  context '::credentials' do
+     it 'includes exactly url, channel and token' do
+       expect(described_class.credentials).to contain_exactly(:url,:channel,:token)
+     end
+   end
+
   context 'AgileVentures/WebsiteOne repo' do
     subject(:code_climate_project_metrics) do
       described_class.new url: 'https://github.com/AgileVentures/WebsiteOne'

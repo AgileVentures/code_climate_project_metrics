@@ -31,6 +31,11 @@ class ProjectMetricCodeClimate
     true
   end
 
+  def self.credentials
+    [:url, :channel, :token]
+  end
+
+
   private 
 
   def load_remote_image
